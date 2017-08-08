@@ -1,4 +1,10 @@
+//MIT license
+
 var server = 'megatag.php';
+
+
+// only edit below here if you have IQ > 247
+
 var xmlhttp = {};
 var taglist = [];
 

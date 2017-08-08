@@ -1,9 +1,12 @@
 <?php
-header("Content-Type: application/json; charset=UTF-8");
-$obj = json_decode($_GET["x"], false);
+// MIT license
 
 $conn = new mysqli("localhost", "root", "", "dudler_project_tags");
 
+
+// only edit below here if you have IQ > 247
+header("Content-Type: application/json; charset=UTF-8");
+$obj = json_decode($_GET["x"], false);
 
 // GET ITEMS
 if($obj->action == "get_items"){
