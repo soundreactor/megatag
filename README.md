@@ -44,7 +44,7 @@ and change the database connection in megatag.php
 have you ever heard of the movie dirty dancing.
 this is dirty coding
 
-####TODO
--php api returns not consistent
--some ugly javascript
+####TODO<br>
+-php api returns not consistent<br>
+-some ugly javascript<br>
 -html example for the search. (javscript example provided [try SearchItems('globi') in console])
