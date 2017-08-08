@@ -1,0 +1,26 @@
+.megatag-remove{
+	cursor: pointer; cursor: hand; 
+}
+.megatag-main{
+	min-width:10px;
+}
+.megatag-input{
+	background-color: transparent;
+    border: 0px solid;
+	outline: none!important;
+}
+.megatag-tag{
+	margin-right:6px;
+}
+
+
+
+
+
+
+
+#megatag_template_tag, #megatag_template_wrap{
+	visibility:hidden;
+	position:fixed;
+	bottom:0px;
+}
