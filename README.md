@@ -10,7 +10,7 @@ you can let your users add custom tags using this plugin.
 
 ####Screenshot
 
-![Screenshot](http://mrvv.internet-box.ch/server/php/?file=example.PNG&download=1&dir=megatag)
+![Screenshot](http://i.imgur.com/3XlrepR.png)
 
 Please note the sample data is taken directly off the StackOverflow website and remains their property.
 
