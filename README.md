@@ -1,5 +1,8 @@
 # megatag
 
+WARNING! THIS IS BAD CODE!
+i put it for lazy guys to use and perfectionists to improve.
+
 Tagging system 
 
 it relies on bootstrap and typehead
@@ -42,4 +45,6 @@ have you ever heard of the movie dirty dancing.
 this is dirty coding
 
 ####TODO
-
+-php api returns not consistent
+-some ugly javascript
+-html example for the search. (javscript example provided [try SearchItems('globi') in console])
