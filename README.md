@@ -1,7 +1,8 @@
 # megatag
 
 WARNING! THIS IS BAD CODE!
-i put it for lazy guys to use and perfectionists to improve.
+
+i put it here for lazy guys to use and for perfectionists to improve.
 
 Tagging system 
 
