@@ -16,7 +16,6 @@ you can let your users add custom tags using this plugin.
 
 ![Screenshot](http://i.imgur.com/3XlrepR.png)
 
-Please note the sample data is taken directly off the StackOverflow website and remains their property.
 
 #### Basic Example
 
