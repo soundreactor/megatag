@@ -1,11 +1,11 @@
 # megatag
 
-Tagging system based on StackOverflows tags with descriptions.
+Tagging system 
 
-I found myself in need of a tagging system, so I searched far and wide on the internet for a decent one, and I couldn't find one! The style I was going for was the tagging system used on StackOverflow (hence the name SOTag). And searching StackOverflow there are hundreds of questions asking for tagging systems like it!
+it relies on bootstrap and typehead
 
-
-First a little description about what this plugin is for. This plugin is designed to be used with a backend database.
+First a little description about what this plugin is for. 
+This plugin is designed to be used with a backend database.
 you can let your users add custom tags using this plugin.
 
 ####Screenshot
@@ -19,38 +19,26 @@ Please note the sample data is taken directly off the StackOverflow website and 
 It's easy to get started, first include the JavaScript files and the CSS
 
 ```html
-<link rel="stylesheet" type="text/css" href="css/so_tag.css">
-<script type="text/javascript" src="js/jquery.js"></script>
-<script type="text/javascript" src="js/so_tag.js"></script>
+<link href="css/bootstrap.min.css" rel="stylesheet">
+<link href="css/megatag.css" rel="stylesheet">
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/typeahead.bundle.min.js"></script>
+<script src="js/megatag.js"></script>
 ```
 
 
 ```html
-<input type="text" value="1_some, 2_example, 3_tags" id="basic_example" />
-<script type="text/javascript">
-$('#basic_example').sotag({
-	description : true
-});
-</script>
+<div class="megatag-s" data="GLOBI"></div>
 ```
+dont forget to set up the sql database example.sql is provided
+and change the server address in the megatag.js
+and change the database connection in megatag.php
 
-To actually get it to post to the server side just wrap it in a form and add a submit button!
-
-```html
-<form action="result.php" method="post">
-	<input type="text" value="3_php" name="single_example" id="single_example" />
-	<input type="submit" value="Submit" />
-</form>
-
-<script type="text/javascript">
-$('#single_example').sotag({
-	description : true
-});
-</script>
-```
 ####Development
-
-
+have you ever heard of the movie dirty dancing.
+this is dirty coding
 
 ####TODO
 
