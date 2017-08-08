@@ -8,7 +8,7 @@ Tagging system
 
 it relies on bootstrap and typehead
 
-First a little description about what this plugin is for. 
+ 
 This plugin is designed to be used with a backend database.
 you can let your users add custom tags using this plugin.
 
