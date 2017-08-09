@@ -37,12 +37,13 @@ function AddWrapper(elem){
 
 function AddTags(obj,elem){
 	var ojson = JSON.parse(obj);
-	for (var i = 0; i < ojson.length; i++) {
+	console.log(ojson.tag);
+	for (var i = 0; i < ojson.tag.length; i++) {
 		var mainelem = elem.getElementsByClassName("megatag-main")[0];
 		var itm = document.getElementById("megatag_template_tag");
 		var cln = itm.cloneNode(true);
 		cln.removeAttribute('id');
-		cln.childNodes[0].nodeValue = ojson[i]['tag']+" ";
+		cln.childNodes[0].nodeValue = ojson['tag'][i]+" ";
 		cln.getElementsByTagName('span')[0].addEventListener("click", function(theVar){return function(){DeleteTag(theVar)};}(cln),false);
 		mainelem.insertBefore(cln, mainelem.childNodes[0]);
 	}
@@ -50,7 +51,7 @@ function AddTags(obj,elem){
 
 function SendTag(refr){
 	var itemname = refr.parentNode.parentNode.parentNode.getAttribute('data');
-	var strobj = '[{"tag":"'+refr.value+'"}]';
+	var strobj = '{"tag":["'+refr.value+'"]}';
 	AddTags(strobj,refr.parentNode.parentNode.parentNode);
 	var objcmd = {"action":"add_tag","tag":refr.value,"item":itemname};
 	SendCommand(objcmd,alerta,refr);
@@ -131,7 +132,7 @@ div.innerHTML = '<span id="megatag_template_tag" class="megatag-tag label label-
 document.body.appendChild(div);
 
 
-var cmnd = {"action":"get_all"};
+var cmnd = {"action":"get_all_tags"};
 SendCommand(cmnd,GetAllTags,window);
 
 
