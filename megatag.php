@@ -34,7 +34,15 @@ WHERE
 	}
 	
 	//print_r($nuout);
-	echo json_encode($nuout);
+	$jsonout =  json_encode($nuout);
+	
+	if(isset($obj->callback)){
+		header("Location: ".$obj->callback."?x=".$jsonout); /* Redirect browser */
+		exit();
+	}else{
+		echo $jsonout;
+	}
+	
 }
 // GET TAGS
 if($obj->action == "get_tags"){
