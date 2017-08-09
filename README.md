@@ -14,7 +14,7 @@ you can let your users add custom tags using this plugin.
 
 ####Screenshot
 
-![Screenshot](http://i.imgur.com/3XlrepR.png)
+![Screenshot](http://i.imgur.com/rxFB6h8.png)
 
 
 #### Basic Example
