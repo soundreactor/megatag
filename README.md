@@ -45,6 +45,6 @@ have you ever heard of the movie dirty dancing.
 this is dirty coding
 
 ####TODO<br>
--php api returns not consistent<br>
+-no sql injection protection<br>
 -some ugly javascript<br>
 -html example for the search. (javscript example provided [try SearchItems('globi') in console])
