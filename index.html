@@ -1,46 +1,102 @@
 <!DOCTYPE HTML>
 <html lang="en">
-<head>
-<!-- Force latest IE rendering engine or ChromeFrame if installed -->
-<!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><![endif] -->
-<meta charset="utf-8">
-<title>TAG EXMPLE</title>
 
-<link href="css/bootstrap.min.css" rel="stylesheet">
-<link href="css/megatag.css" rel="stylesheet">
+<head>
+	<!-- Force latest IE rendering engine or ChromeFrame if installed -->
+	<!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><![endif] -->
+	<meta charset="utf-8">
+	<title>TAG EXMPLE</title>
+
+	<link href="css/bootstrap.min.css" rel="stylesheet">
+	<link href="css/megatag.css" rel="stylesheet">
+	<link href="css/megatag.css" rel="stylesheet">
 
 </head>
+
 <body>
 
-<h2>MEGATAG EXAMPLE PAGE</h2>
 
-<div class="panel panel-default">
-  <div class="panel-heading">
-    <h3 class="panel-title">SAMI</h3>
-  </div>
-  <div class="panel-body">
-   <div class="megatag-s" data="SAMI"></div>
-  </div>
-</div>
+	<div class="col-lg-6">
+		<h2 style="cursor: pointer; cursor: hand;" onclick="window.location=location.protocol + '//' + location.host + location.pathname;">MEGATAG EXAMPLE PAGE</h2>
+		<div class="input-group">
+			<input data="http://localhost/megatag/megatag.php" type="text" class="megatag-item-search form-control" placeholder="Search by Tag..">
+			<span class="input-group-btn">
+		<button class="btn btn-default" type="submit">GO</button>
+	</span>
+		</div>
+		<br>
+		<h3>Fixed Results</h3>
+		<div class="panel panel-default">
+			<div class="panel-heading">
+				<h3 class="panel-title">SAMI</h3>
+			</div>
+			<div class="panel-body">
+				<div class="megatag-s" data="SAMI"></div>
+			</div>
+		</div>
 
 
-<div class="panel panel-default">
-  <div class="panel-heading">
-    <h3 class="panel-title">GLOBI</h3>
-  </div>
-  <div class="panel-body">
-   <div class="megatag-s" data="GLOBI"></div>
-  </div>
-</div>
+		<div class="panel panel-default">
+			<div class="panel-heading">
+				<h3 class="panel-title">GLOBI</h3>
+			</div>
+			<div class="panel-body">
+				<div class="megatag-s" data="GLOBI"></div>
+			</div>
+		</div>
+		<h3>Search Results</h3>
+		<div id="megatag-search-results"></div>
 
+	</div>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/typeahead.bundle.min.js"></script>
+	<script src="js/megatag.js"></script>
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-<script src="js/bootstrap.min.js"></script>
+	<script>
+		function parseURLParams(url) {
+			var queryStart = url.indexOf("?") + 1,
+				queryEnd = url.indexOf("#") + 1 || url.length + 1,
+				query = url.slice(queryStart, queryEnd - 1),
+				pairs = query.replace(/\+/g, " ").split("&"),
+				parms = {},
+				i, n, v, nv;
 
-<script src="js/typeahead.bundle.min.js"></script>
+			if (query === url || query === "") return;
 
-<script src="js/megatag.js"></script>
+			for (i = 0; i < pairs.length; i++) {
+				nv = pairs[i].split("=", 2);
+				n = decodeURIComponent(nv[0]);
+				v = decodeURIComponent(nv[1]);
 
+				if (!parms.hasOwnProperty(n)) parms[n] = [];
+				parms[n].push(nv.length === 2 ? v : null);
+			}
+			return parms;
+		}
+		var urlString = window.location.href;
+		urlParams = parseURLParams(urlString);
+		if (typeof urlParams != "undefined") {
+			parsedobj = JSON.parse(urlParams.x[0]);
+
+			for (i = 0; i < parsedobj.length; i++) {
+				console.log(parsedobj[i]['item']);
+
+				var div = document.createElement("div");
+
+				div.innerHTML = '<div class="panel panel-default">' +
+					'<div class="panel-heading">' +
+					'<h3 class="panel-title">' + parsedobj[i]['item'] + '</h3>' +
+					'</div>' +
+					'<div class="panel-body">' +
+					'<div class="megatag-s" data="' + parsedobj[i]['item'] + '"></div>' +
+					'</div>' +
+					'</div>';
+
+				document.getElementById("megatag-search-results").appendChild(div);
+			}
+		}
+	</script>
 
 </body>
 </html>

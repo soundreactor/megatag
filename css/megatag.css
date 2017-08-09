@@ -1,5 +1,5 @@
 .megatag-remove{
-	cursor: pointer; cursor: hand; 
+	cursor: pointer; cursor: hand;
 }
 .megatag-main{
 	min-width:10px;
@@ -17,4 +17,16 @@
 	visibility:hidden;
 	position:fixed;
 	bottom:0px;
+}
+
+.tt-menu{
+	background-color: white;
+	margin-left: -5px;
+	border-left: solid #ddd 1px;
+	border-bottom: solid #ddd 1px;
+	border-right: solid #ddd 1px;
+	padding-left: 5px;
+	padding-bottom: 5px;
+	padding-right: 5px;
+	border-radius: 4px;
 }
