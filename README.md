@@ -1,10 +1,14 @@
 # megatag
 
+WARNING! THIS IS BAD CODE!
+
+i put it here for lazy guys to use and for perfectionists to improve.
+
 Tagging system 
 
 it relies on bootstrap and typehead
 
-First a little description about what this plugin is for. 
+ 
 This plugin is designed to be used with a backend database.
 you can let your users add custom tags using this plugin.
 
@@ -12,7 +16,6 @@ you can let your users add custom tags using this plugin.
 
 ![Screenshot](http://i.imgur.com/3XlrepR.png)
 
-Please note the sample data is taken directly off the StackOverflow website and remains their property.
 
 #### Basic Example
 
@@ -41,5 +44,7 @@ and change the database connection in megatag.php
 have you ever heard of the movie dirty dancing.
 this is dirty coding
 
-####TODO
-
+####TODO<br>
+-php api returns not consistent<br>
+-some ugly javascript<br>
+-html example for the search. (javscript example provided [try SearchItems('globi') in console])
