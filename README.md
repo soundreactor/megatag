@@ -41,8 +41,7 @@ and change the database connection in megatag.php
 
 ####Development
 
-have you ever heard of the movie dirty dancing.
-this is dirty coding
+...
 
 ####TODO<br>
 -no sql injection protection<br>
